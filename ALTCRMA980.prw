@@ -16,12 +16,11 @@ Ponto de entrada para atualização de dados do cliente
 /*/
 User Function CRMA980()
 
-    Local oObj          := Nil
     local oDados        := JsonObject():New()
     Local aParam        := PARAMIXB
     Local cIdPonto      := ""
     Local nOperation    := 0
-    Local lAltera       := .T.
+    Local lAltera       := .F.
     Local aAlterados    := {}
     Local i, j, cCampo, cJsonCampo, cValorCampo
     Local aMapeamento := { ;
@@ -35,7 +34,7 @@ User Function CRMA980()
     }
 
     If aParam == NIL
-        Help(NIL, NIL, "Cancelado", NIL, "Objeto não informado.", 1, 0, NIL, NIL, NIL, NIL, NIL, NIL)
+        MsgInfo("Processo de Atualização cancelado! Não foi possível identificar os parâmetros.", "Atualização de Usuário")
         Return .F.
     EndIf
     
