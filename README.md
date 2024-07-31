@@ -1,8 +1,3 @@
-# Este teste foi desenvolvido em uma versão Protheus desatualizada
-### Ajustes para teste da execução da rotina foram realizados para conseguir executar o desejado
-
-## GitHub de aplicação node para teste de comunicação simples: 
-https://github.com/kleysongomes/server-node-api-teste
 
 ## Documentações consultadas para o desenvolvimento do teste:
 - https://centraldeatendimento.totvs.com/hc/pt-br/articles/360039466954-Cross-Segmentos-TOTVS-Backoffice-Linha-Protheus-SIGAFAT-Pontos-de-entrada-para-altera%C3%A7%C3%A3o-do-cadastro-do-cliente
