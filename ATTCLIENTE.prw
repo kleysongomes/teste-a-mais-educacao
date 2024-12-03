@@ -1,5 +1,5 @@
-/*/{Protheus.doc} AttCliente
-    FunÁ„o para comunicaÁ„o com a API de atualizaÁ„o de dados do cliente
+/*{Protheus.doc} AttCliente
+    Fun√ß√£o para comunica√ß√£o com a API de atualiza√ß√£o de dados do cliente
     @type  user Function
     @author Kleyson Gomes
     @since 29/07/2024
@@ -9,7 +9,7 @@
     @example
     (examples)
     @see https://tdn.totvs.com.br/display/public/framework/FWRest
-/*/
+*/
 User Function AttCliente(CodCli, cJson)
     Local cBaseUrl      := "http://iws.grupoa.com.br/"
     Local aHeaders      := {'Content-Type: application/json',;
@@ -25,7 +25,7 @@ User Function AttCliente(CodCli, cJson)
     
     If !lResponse
         cRet := oRest:GetLastError()
-        MsgInfo("Erro ao atualizar os dados do cliente no Time Sistemas! Erro: " + cRet, "AtualizaÁ„o de Usu·rio")
+        MsgInfo("Erro ao atualizar os dados do cliente no Time Sistemas! Erro: " + cRet, "Atualiza√ß√£o de Usu√°rio")
     EndIf
 
 Return lResponse
