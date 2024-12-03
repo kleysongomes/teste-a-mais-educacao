@@ -1,8 +1,8 @@
 #include "Protheus.ch"
 #include "FWMVCDEF.CH"
 
-/*/{Protheus.doc} ALTCRMA980
-Ponto de entrada para atualização de dados do cliente 
+/*{Protheus.doc} ALTCRMA980
+Ponto de entrada para atualizaÃ§Ã£o de dados do cliente 
 @type user function
 @author Kleyson Gomes
 @since 29/07/2024
@@ -13,7 +13,7 @@ Ponto de entrada para atualização de dados do cliente
 @see https://centraldeatendimento.totvs.com/hc/pt-br/articles/360000146128-Cross-Segmento-TOTVS-Backoffice-Linha-Protheus-ADVPL-Ponto-de-entrada-MVC-CRMA980
 @see https://centraldeatendimento.totvs.com/hc/pt-br/articles/7406000650391-Cross-Segmento-TOTVS-Backoffice-Linha-Protheus-SIGAFAT-Incidente-There-is-a-source-name-conflict-ao-utilizar-Ponto-de-Entrada
 @see https://centraldeatendimento.totvs.com/hc/pt-br/articles/360019002512-Cross-Segmento-TOTVS-Backoffice-Linha-Protheus-ADVPL-Retornar-o-campo-que-esta-sendo-alterado-em-rotina-MVC
-/*/
+*/
 User Function CRMA980()
 
     local oDados        := JsonObject():New()
@@ -34,7 +34,7 @@ User Function CRMA980()
     }
 
     If aParam == NIL
-        MsgInfo("Processo de Atualização cancelado! Não foi possível identificar os parâmetros.", "Atualização de Usuário")
+        MsgInfo("Processo de AtualizaÃ§Ã£o cancelado! NÃ£o foi possÃ­vel identificar os parÃ¢metros.", "AtualizaÃ§Ã£o de UsuÃ¡rio")
         Return .F.
     EndIf
     
@@ -63,11 +63,11 @@ User Function CRMA980()
     If lAltera
         cJson := FWJsonSerialize(oDados) 
         If !u_AttCliente(M->A1_COD, cJson)
-            MsgInfo("Processo de Atualização cancelado!","Atualização de Usuário")
+            MsgInfo("Processo de AtualizaÃ§Ã£o cancelado!","AtualizaÃ§Ã£o de UsuÃ¡rio")
             Return .F.
         EndIf
         
-        MsgInfo("Dados atualizados no Time Sistemas!", "Atualização de Usuário")
+        MsgInfo("Dados atualizados no Time Sistemas!", "AtualizaÃ§Ã£o de UsuÃ¡rio")
     EndIf
 
 Return .T.
